@@ -34,6 +34,12 @@ spring:
               - DELETE
               - OPTIONS
       routes:
+        - id : auth-service
+          uri : lb://AUTH-SERVICE
+          predicates:
+            - Path=/auth-service/**
+          filters:
+            - StripPrefix=1
 
 eureka:
   client:
