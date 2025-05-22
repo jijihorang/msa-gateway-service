@@ -48,6 +48,7 @@ jobs:
           script: |
             cd ~/gateway-service
             
+            
             docker-compose pull gateway
             docker-compose up -d gateway
             docker image prune -f
